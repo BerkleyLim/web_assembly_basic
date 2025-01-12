@@ -1,6 +1,19 @@
 {
-  "files": [],
-  "jsx": "react-jsx",
+  "compilerOptions": {
+    "jsx": "react-jsx", // 또는 "react" (React 17+ 이상 사용 시 권장)
+    "target": "ESNext", // 적절한 ES 버전 선택
+    "module": "ESNext",
+    "strict": true,
+    "noImplicitAny": false, // `any` 타입을 허용 (경고로 낮아짐)
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

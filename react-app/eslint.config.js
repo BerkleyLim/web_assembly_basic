@@ -16,9 +16,11 @@ export default tseslint.config(
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      // '@typescript-eslint': tseslint, // TypeScript ESLint 플러그인 추가
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/no-explicit-any': 'warn', // any 타입을 경고로 표시
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
